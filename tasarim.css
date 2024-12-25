@@ -1,0 +1,45 @@
+﻿
+#navbar {
+    height: 150px;
+    width: 90%;
+    margin: 20px 0px 20px 85px;
+}
+
+#container1 {
+    width: 60%;
+    height: 620px;
+    float: left;
+    margin: 40px 20px 20px 100px;
+}
+
+#container3 {
+    width: 25%;
+    height: 620px;
+    float: right;
+    margin-right: 100px;
+    margin-top:40px;
+}
+
+#menu {
+    height: 50px;
+    width: 80%;
+    margin-left: 140px;
+    border-top: 3px solid #612921;
+    border-bottom: 5px solid #612921;
+}
+
+.menu-style .menu-ıtem { /*menünün içindeki kategoriler*/
+    color: #612921;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    margin-left:22px;
+}
+.menu-style .menu-ıtem:hover { /*üstüne gelince renk değiştirme*/
+    background-color: lightyellow;
+    color: saddlebrown;
+    border-radius: 5px;
+    height: 40px;
+    margin-top:5px;
+}

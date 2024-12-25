@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="KitapSite.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="tasarim.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="navbar">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="menu">
+
+            <asp:Menu ID="Menu1" runat="server" CssClass="menu-style" ItemWrap="True" OnMenuItemClick="Menu1_MenuItemClick" Orientation="Horizontal">
+                <StaticMenuItemStyle HorizontalPadding="75px" CssClass="menu-ıtem"/>
+                <Items>
+                    <asp:MenuItem Text="Anasayfa" Value="Anasayfa" NavigateUrl="~/anasayfa.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Kitap Öner" Value="Kitap Öner" NavigateUrl="~/kitapöner.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Hakkımızda" Value="Hakkımızda" NavigateUrl="~/hakkimizda.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="İletişim" Value="İletişim" NavigateUrl="~/iletisim.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Kaydol" Value="Kaydol"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+
+        </div>
+        <div id="container1">
+            
+        </div>
+        <div id="container3">
+
+            <asp:DataList ID="DataList1" runat="server">
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:DataList>
+
+        </div>
+    </form>
+</body>
+</html>
